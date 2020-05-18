@@ -25,7 +25,7 @@ const AddIngredientForm = (props) => {
     };
 
     return (
-        <form>
+        <form className="content-container" >
             <input placeholder="qty" value={qty} onChange={qtyChanged} />
             <select value={qtyType} onChange={(e) => setQtyType(e.target.value)}>
                 <option value="pinch">Pinch</option>
