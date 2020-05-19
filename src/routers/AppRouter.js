@@ -10,9 +10,10 @@ const AppRouter = () => (
     <Router history={history} >
         <Switch>
             <Route exact path="/" component={LoginPage} />
+            <Route path="/recipeList" component={RecipeList} />
             <Route component={<p>Unknown Path</p>} />
         </Switch>
     </Router>
 );
 
-export default AppRouter;
+export { history, AppRouter as default };
