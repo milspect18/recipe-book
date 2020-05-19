@@ -1,7 +1,6 @@
 import React, { useReducer } from "react";
 import recipesReducer from "../reducers/recipes";
 import RecipesContext from "../context/recipes-context";
-// import AddIngredientsForm from "./AddIngredientForm";
 import RecipeItem from "./RecipeItem";
 
 const tempRecipe = {
@@ -20,7 +19,7 @@ const tempRecipeTwo = {
     img: "https://www.awesomeinventions.com/wp-content/uploads/2014/09/chocolate-fountain.jpg"
 }
 
-const RecipesApp = () => {
+const RecipeList = () => {
     const [recipes] = useReducer(recipesReducer, []);
 
     return (
@@ -39,4 +38,4 @@ const RecipesApp = () => {
     );
 };
 
-export default RecipesApp;
+export default RecipeList;
