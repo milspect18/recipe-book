@@ -1,0 +1,110 @@
+
+.recipe-list-item {
+    // background: gray;
+    display: flex;
+    align-items: center;
+    padding: $m-size $m-size;
+}
+
+.recipe-list-item__img-crop {
+    min-width: $s-thumbnail;
+    max-width: $s-thumbnail;
+    height: $s-thumbnail;
+    border-radius: 50%;
+    overflow: hidden;
+
+    @media (min-width:  $s-screen-breakpoint) {
+        min-width: $l-thumbnail;
+        max-width: $l-thumbnail;
+        height: $l-thumbnail;
+    }
+
+    transition: height 0.2s, width 0.2s;
+}
+
+.recipe-list-item__img {
+    min-width: $s-thumbnail;
+    max-width: $s-thumbnail;
+    height: $s-thumbnail;
+    object-fit: cover;
+    border-radius: 50%;
+
+
+    @media (min-width:  $s-screen-breakpoint) {
+        min-width: $l-thumbnail;
+        max-width: $l-thumbnail;
+        height: $l-thumbnail;
+    }
+
+    transition: height 0.2s, width 0.2s;
+}
+
+.recipe-list-item__details {
+    // background: rebeccapurple;
+    flex-grow: 1;
+    margin: 0 0 0 $xs-size;
+    padding: 0;
+
+    @media (min-width:  $s-screen-breakpoint) {
+        margin: 0 0 0 $m-size;
+    }
+}
+
+.recipe-list-item__title {
+    // background: aqua;
+    color: $gray;
+    font-size: $s-size;
+    text-decoration: underline;
+    margin: 0;
+
+    @media (min-width:  $s-screen-breakpoint) {
+        font-size: $m-size;
+        font-weight: bold;
+    }
+}
+
+.recipe-list-item__times {
+    // background: blue;
+    font-style: oblique;
+    font-size: $s-size;
+    margin: 0;
+
+    @media (min-width:  $s-screen-breakpoint) {
+        font-size: $m-size;
+    }
+}
+
+.recipe-list-item__times-long {
+    opacity: 0.0;
+
+    @media (min-width:  $s-screen-breakpoint) {
+        opacity: 1.0;
+    }
+}
+
+.recipe-list-item__times-short {
+    opacity: 1.0;
+
+    @media (min-width:  $s-screen-breakpoint) {
+        opacity: 0.0;
+    }
+}
+
+.recipe-list-item__rating {
+    // background: rosybrown;
+    align-items: center;
+    height: $s-thumbnail;
+    display: flex;
+    font-size: $s-size;
+
+    @media (min-width:  $xs-screen-breakpoint) {
+        font-size: $m-size;
+    }
+
+    @media (min-width:  $s-screen-breakpoint) {
+        font-size: $l-size;
+        height: $l-thumbnail;
+    }
+
+    transition: font-size 0.2s;
+}
