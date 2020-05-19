@@ -7,15 +7,17 @@ const LoginPage = () => {
     };
 
     return (
-        <div className="login-box">
-            <h1 className="login-box__title">RecipeBook</h1>
-            <p className="login-box__phrase">A path to happy tastebuds!</p>
-            <button
-                className="login-box__button"
-                onClick={handleLogin}
-            >
-                Login
+        <div className="login-page">
+            <div className="login-box">
+                <img src="/images/logo.png" className="login-box__logo" />
+                <p className="login-box__phrase">A path to happy tastebuds!</p>
+                <button
+                    className="login-box__button login-box__button--google"
+                    onClick={handleLogin}
+                >
+                    Login with Google
             </button>
+            </div>
         </div>
     );
 };
