@@ -2,12 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom";
 import * as serviceWorker from "./serviceWorker";
 import "./styles/styles.scss";
-import RecipesApp from "./components/RecipesApp";
+import AppRouter from "./routers/AppRouter";
 
 
 ReactDOM.render(
     <React.StrictMode>
-        <RecipesApp />
+        <AppRouter />
     </React.StrictMode>,
     document.getElementById("root")
 );
