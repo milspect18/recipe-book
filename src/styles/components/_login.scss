@@ -1,0 +1,74 @@
+
+.login-page {
+    align-items: center;
+    background: url("/images/login_bk.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    width: 100vw;
+}
+
+.login-box {
+    backdrop-filter: blur($xs-size);
+    background: rgba($color: $light-gray, $alpha: 0.5);
+    border: 2px solid rgba($color: white, $alpha: 0.5);
+    border-radius: 20px;
+    display: flex;
+    filter: drop-shadow(0 0 $s-size white);
+    flex-direction: column;
+    align-items: center;
+    max-width: 90%;
+}
+
+.login-box__logo {
+    height: auto;
+    margin: $s-size $xl-size;
+    max-width: inherit;
+    object-fit: contain;
+
+    @media (min-width: $s-screen-breakpoint) {
+        max-width: 50rem;
+    }
+}
+
+.login-box__phrase {
+    color: #663399;
+    font-size: $font-sz-sm;
+    font-style: oblique;
+    margin-top: 0;
+
+    @media (min-width: $xxs-screen-breakpoint) {
+        font-size: $font-sz-lg;
+    }
+}
+
+.login-box__button {
+    background: lighten($dark-blue, 20%);
+    border: none;
+    border-bottom: 3px solid $dark-blue;
+    border-radius: $s-size;
+    color: $light-gray;
+    font-size: $font-sz-sm;
+    line-height: 1;
+    margin: $m-size $s-size;
+    padding: $s-size $m-size;
+
+    transition: background ease 0.2s;
+
+    @media (min-width: $xxs-screen-breakpoint) {
+        font-size: $font-sz-lg;
+        margin: $l-size $m-size;
+        padding: $s-size $l-size;
+    }
+}
+
+.login-box__button--google {
+    background: $teal;
+    border-bottom: 3px solid darken($color: $teal, $amount: 8%);
+}
+
+.login-box__button--google:hover {
+    background: darken($color: $teal, $amount: 8%);
+}
