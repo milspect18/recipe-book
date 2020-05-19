@@ -9,10 +9,10 @@ const StarRating = ({ className, count, minimize }) => {
             {
                 minimize ? (
                     <p style={{ whiteSpace: "nowrap", overflow: "hidden" }} >{`${numStars}${star}`}</p>
-    ) : (
-        [...Array(numStars).keys()].map((_, idx) => <p key={idx}>{star}</p>)
-    )
-}
+                ) : (
+                        [...Array(numStars).keys()].map((_, idx) => <p key={idx}>{star}</p>)
+                    )
+            }
         </div >
     );
 };
