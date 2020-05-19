@@ -17,7 +17,7 @@ const tempRecipeTwo = {
     rating: 5,
     prepTime: 20,
     cookTime: 30,
-    img: "https://hips.hearstapps.com/delish/assets/17/37/1505340657-baked-spaghetti-delish-1.jpg"
+    img: "https://www.awesomeinventions.com/wp-content/uploads/2014/09/chocolate-fountain.jpg"
 }
 
 const RecipesApp = () => {
