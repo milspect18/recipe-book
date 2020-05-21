@@ -2,6 +2,7 @@ import React, { useReducer } from "react";
 import recipesReducer from "../reducers/recipes";
 import RecipesContext from "../context/recipes-context";
 import RecipeItem from "./RecipeItem";
+import Header from "./Header";
 
 const tempRecipe = {
     name: "Double Baked Spaghetti",
@@ -24,6 +25,7 @@ const RecipeList = () => {
 
     return (
         <RecipesContext.Provider value={{ recipes }}>
+            <Header />
             <RecipeItem recipe={tempRecipe} />
             <RecipeItem style={{ background: "#F0F0F0" }} recipe={tempRecipeTwo} />
             <RecipeItem recipe={tempRecipe} />

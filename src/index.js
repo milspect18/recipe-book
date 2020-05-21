@@ -29,7 +29,7 @@ serviceWorker.unregister();
 firebase.auth().onAuthStateChanged((user) => {
     renderApp();
 
-    if (user) {
-        history.push("/recipeList")
-    }
+    // if (user) {
+    //     history.push("/recipeList")
+    // }
 });
