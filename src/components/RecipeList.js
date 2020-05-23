@@ -1,6 +1,4 @@
-import React, { useReducer } from "react";
-import recipesReducer from "../reducers/recipes";
-import RecipesContext from "../context/recipes-context";
+import React, { useContext, useEffect } from "react";
 import RecipeItem from "./RecipeItem";
 import Header from "./Header";
 
@@ -21,10 +19,8 @@ const tempRecipeTwo = {
 }
 
 const RecipeList = () => {
-    const [recipes] = useReducer(recipesReducer, []);
-
     return (
-        <RecipesContext.Provider value={{ recipes }}>
+        <React.Fragment>
             <Header />
             <RecipeItem recipe={tempRecipe} />
             <RecipeItem style={{ background: "#F0F0F0" }} recipe={tempRecipeTwo} />
@@ -36,7 +32,7 @@ const RecipeList = () => {
             <RecipeItem style={{ background: "#F0F0F0" }} recipe={tempRecipeTwo} />
             <RecipeItem recipe={tempRecipe} />
             <RecipeItem style={{ background: "#F0F0F0" }} recipe={tempRecipeTwo} />
-        </RecipesContext.Provider>
+        </React.Fragment>
     );
 };
 
