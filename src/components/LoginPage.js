@@ -8,17 +8,7 @@ import {
 
 const LoginPage = () => {
     const handleLogin = (provider) => {
-        switch (provider.toLowerCase()) {
-            case "google":
-                firebase.auth().signInWithPopup(googleAuthProvider);
-                break;
-            case "yahoo":
-                firebase.auth().signInWithPopup(yahooAuthProvider);
-                break;
-            case "facebook":
-                firebase.auth().signInWithPopup(facebookAuthProvider);
-                break;
-        }
+        firebase.auth().signInWithPopup(provider);
     };
 
     return (
@@ -29,21 +19,21 @@ const LoginPage = () => {
 
                 <button
                     className="login-box__button login-box__button--google"
-                    onClick={() => handleLogin("google")}
+                    onClick={() => handleLogin(googleAuthProvider)}
                 >
                     Login with Google
                 </button>
 
                 <button
                     className="login-box__button login-box__button--google"
-                    onClick={() => handleLogin("yahoo")}
+                    onClick={() => handleLogin(yahooAuthProvider)}
                 >
                     Login with Yahoo!
                 </button>
 
                 <button
                     className="login-box__button login-box__button--google"
-                    onClick={() => handleLogin("facebook")}
+                    onClick={() => handleLogin(facebookAuthProvider)}
                 >
                     Login with Facebook
                 </button>
