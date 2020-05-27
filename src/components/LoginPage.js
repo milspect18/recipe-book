@@ -1,9 +1,15 @@
 import React from "react";
-import { firebase, googleAuthProvider } from "../firebase/firebase";
+import {
+    firebase,
+    googleAuthProvider,
+    yahooAuthProvider,
+    facebookAuthProvider,
+    twitterAuthProvider
+} from "../firebase/firebase";
 
 const LoginPage = () => {
-    const handleLogin = () => {
-        firebase.auth().signInWithPopup(googleAuthProvider);
+    const handleLogin = (provider) => {
+        firebase.auth().signInWithPopup(provider);
     };
 
     return (
@@ -11,12 +17,34 @@ const LoginPage = () => {
             <div className="login-box">
                 <img src="/images/logo.png" className="login-box__logo" />
                 <p className="login-box__phrase">A path to happy tastebuds!</p>
+
                 <button
                     className="login-box__button login-box__button--google"
-                    onClick={handleLogin}
+                    onClick={() => handleLogin(googleAuthProvider)}
                 >
                     Login with Google
-            </button>
+                </button>
+
+                <button
+                    className="login-box__button login-box__button--google"
+                    onClick={() => handleLogin(yahooAuthProvider)}
+                >
+                    Login with Yahoo!
+                </button>
+
+                <button
+                    className="login-box__button login-box__button--google"
+                    onClick={() => handleLogin(facebookAuthProvider)}
+                >
+                    Login with Facebook
+                </button>
+
+                <button
+                    className="login-box__button login-box__button--google"
+                    onClick={() => handleLogin(twitterAuthProvider)}
+                >
+                    Login with Twitter
+                </button>
             </div>
         </div>
     );
