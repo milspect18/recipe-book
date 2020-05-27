@@ -3,7 +3,8 @@ import {
     firebase,
     googleAuthProvider,
     yahooAuthProvider,
-    facebookAuthProvider
+    facebookAuthProvider,
+    twitterAuthProvider
 } from "../firebase/firebase";
 
 const LoginPage = () => {
@@ -36,6 +37,13 @@ const LoginPage = () => {
                     onClick={() => handleLogin(facebookAuthProvider)}
                 >
                     Login with Facebook
+                </button>
+
+                <button
+                    className="login-box__button login-box__button--google"
+                    onClick={() => handleLogin(twitterAuthProvider)}
+                >
+                    Login with Twitter
                 </button>
             </div>
         </div>
